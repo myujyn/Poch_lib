@@ -1,31 +1,27 @@
 # Poch'Lib
 
-Poch'Lib est une application de gestion de livres développée pour "La plume enchantée". C'est une Single Page Application (SPA) qui permet la recherche, l'ajout, l'affichage, et la suppression de livres.
+Poch'Lib est une application développée pour la librairie "La Plume Enchantée", permettant de rechercher des livres en ligne, de les ajouter à une liste personnelle, puis de récupérer sa sélection à la librairie.
 
-## Accès en Ligne
+## Pré-requis
 
-Vous pouvez accéder à la version en ligne de l'application via GitHub Pages ici :
-[https://myujyn.github.io/Poch_lib/](https://myujyn.github.io/Poch_lib/)
+- Utilisation d'un terminal de commande
+- Utilisation de Visual Studio Code
+- Installation de l'extension **Live Server** pour Visual Studio Code
 
-## Fonctionnalités
+## Installation
 
-- **Recherche de livres** : Recherchez des livres par titre et auteur.
-- **Ajout de livres** : Ajoutez des livres à votre liste personnelle.
-- **Affichage des livres** : Visualisez la liste des livres ajoutés.
-- **Suppression de livres** : Supprimez des livres de votre liste.
+1. Ouvrez le terminal de commande et utilisez la commande suivante dans un nouveau dossier : git clone https://github.com/myujyn/Poch_lib.git
+2. Ouvrez le projet dans Visual Studio Code.
+3. Cliquez avec le bouton droit sur le fichier index.html et sélectionnez Open with Live Server.
 
-## Structure du Projet
+## Démarrage
+- Appuyer sur le bouton **"Ajouter un livre"** pour commencer.
+- Renseigner un titre de livre et un auteur dans les champs de recherche.
+- Cliquer sur **"Rechercher"** pour lancer la requête et afficher les résultats.
+- Cliquer sur l'icône en forme de **marque-page** pour ajouter un livre à votre **poch'liste**.
+- Cliquer sur l'icône en forme de **poubelle** pour supprimer un livre de la poch'liste.
 
-- **`index.html`** : La page principale de l'application.
-- **`script.js`** : Le fichier JavaScript contenant la logique de l'application.
-- **`styles.css`** : Les styles CSS pour l'application.
+## Auteur
 
-## Contribuer
-
-Si vous souhaitez contribuer au projet, veuillez soumettre une demande de tirage via GitHub.
-
-## Contact
-
-- **Auteur** : Alexandre HURAULT
-- **Dépôt GitHub** : [https://github.com/myujyn/Poch_lib](https://github.com/myujyn/Poch_lib)
-- **Problèmes** : [https://github.com/myujyn/Poch_lib/issues](https://github.com/myujyn/Poch_lib/issues)
+Alexandre HURAULT
+Dépôt GitHub : https://github.com/myujyn/Poch_lib

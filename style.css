@@ -1,0 +1,317 @@
+/* styles.css */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+#myBooks {
+    text-align: center;
+    padding: 20px;
+    max-width: 100%; /* S'étend sur toute la largeur */
+}
+
+.logo {
+    display: block;
+    margin: 40px auto 20px auto; /* Centre le logo et ajoute un espace au-dessus et en dessous */
+    width: 150px; /* Ajustez la largeur selon vos besoins */
+    height: auto; /* Conserve les proportions de l'image */
+}
+
+/* Espacement sous le titre */
+.title + .logo {
+    margin-top: 40px; /* Espace entre le titre et le logo */
+}
+
+.title, .h2 {
+    margin: 0;
+}
+
+.title {
+    font-size: 2em;
+    color: #333; /* Couleur du texte */
+    text-align: center; /* Alignement du texte */
+    margin: 20px auto; /* Marges au-dessus et en dessous, centrer horizontalement */
+    max-width: 2000px; /* Largeur de l'élément */
+    padding: 20px; /* Espacement intérieur */
+    border: 2px solid #d3d3d3; /* Contour gris */
+    border-radius: 15px; /* Coins arrondis */
+    background-color: #f9f9f9; /* Fond légèrement gris clair pour contraster le contour */
+    box-sizing: border-box; /* Inclure le padding et le border dans la largeur totale */
+}
+
+.h2 {
+    font-size: 1.8em;
+    margin-top: 20px;
+}
+
+#resultatRecherche {
+    display: flex;
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante */
+    gap: 20px; /* Espace entre les éléments */
+}
+
+#resultatRecherche h2 {
+    font-size: 2em; /* Taille de la police */
+    width: 100%; /* Utilise toute la largeur disponible */
+    color: #228064; /* Couleur de la police */
+    margin-top: 70px; /* Espace au-dessus du titre */
+    padding-bottom: 10px; /* Espace entre le titre et le trait horizontal */
+    padding-top: 10px; /* Espace entre le titre et le haut */
+    border: 2px solid #228064;
+    border-radius: 15px;
+    box-sizing: border-box; /* Assure que le padding et les bordures sont inclus dans la largeur */
+}
+
+hr {
+    border: 0;
+    height: 0px; /* Épaisseur de la ligne */
+    background: #333; /* Couleur de la ligne */
+    margin-top: 20px;
+    max-width: 2000px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#content {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-top: 20px;
+    max-width: 2000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#boutonAjouterLivre {
+    padding: 10px 20px;
+    margin: 20px auto;
+    display: block;
+    background-color: #228064;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+#boutonAjouterLivre:hover {
+    background-color: #87aca1;
+}
+
+#formulaireAjout {
+    margin-bottom: 20px; /* Espace sous le formulaire avant les résultats */
+}
+
+#formulaireAjout label {
+    display: block;
+    margin-top: 10px;
+}
+
+#formulaireAjout input {
+    width: 90%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Styles généraux pour les boutons dans le formulaire */
+#formulaireAjout button {
+    padding: 10px 15px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em; 
+}
+
+/* Styles spécifiques pour le bouton Rechercher */
+#formulaireAjout .rechercher {
+    background-color: #228064; 
+    color: white; 
+}
+
+#formulaireAjout .rechercher:hover {
+    background-color: #87aca1; 
+}
+
+/* Styles spécifiques pour le bouton Annuler */
+#formulaireAjout .annuler {
+    background-color: #dc3545; 
+    color: white; 
+}
+
+#formulaireAjout .annuler:hover {
+    background-color: #fca3ac; 
+}
+
+#pochListeSection {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Crée exactement 4 colonnes de taille égale */
+    gap: 20px; /* Espace entre les éléments */
+    margin: 20px;
+}
+
+/* Styles généraux pour les livres dans les sections */
+.livre-poch-liste, .livre-resultat {
+    display: flex; /* Utilisation de Flexbox pour le conteneur */
+    flex-direction: column; /* Aligne les éléments verticalement */
+    background-color: #d8d7d7fd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: left;
+    border: 2px solid #228064;
+    position: relative; /* Nécessaire pour positionner les éléments absolus */
+}
+
+.livre-poch-liste img, .livre-resultat img {
+    max-width: 100%; /* Limite la largeur à 100% du conteneur */
+    width: 100%; /* Ajuste la largeur à 100% du conteneur */
+    height: auto; /* Conserve les proportions de l'image */
+    display: block;
+    margin-top: auto; /* Pousse l'image vers le bas du conteneur */
+    object-fit: cover; /* S'assure que l'image couvre l'espace alloué tout en conservant son ratio d'aspect */
+    border-radius: 5px; /* Ajoute des coins arrondis */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ajoute une ombre légère pour donner un peu de profondeur */
+}
+
+.livre-poch-liste h3, .livre-resultat h3 {
+    margin-top: 0;
+    font-size: 1em;
+}
+
+.livre-poch-liste p, .livre-resultat p {
+    margin-bottom: 10px;
+}
+
+.livre-poch-liste button {
+    background-color: transparent; /* Fond transparent par défaut */
+    border: 2px solid transparent; /* Contour transparent par défaut */
+    color: #dc3545; /* Couleur principale */
+    font-size: 1.2em; /* Taille de police */
+    padding: 8px; /* Espace intérieur */
+    border-radius: 50%; /* Contour arrondi */
+    display: inline-flex; /* Centrage de l'icône dans le contour */
+    align-items: center; /* Centrage vertical */
+    justify-content: center; /* Centrage horizontal */
+    transition: all 0.3s ease; /* Animation pour effet hover */
+    cursor: pointer;
+    width: 40px; /* Largeur fixe pour le bouton */
+    height: 40px; /* Hauteur fixe pour le bouton */
+}
+
+.livre-poch-liste button:hover {
+    color: #c82333; /* Couleur de l'icône au survol */
+    border-color: #c82333; /* Couleur du contour au survol */
+}
+
+.livre-poch-liste button:active {
+    color: #fff; /* Couleur de l'icône au clic */
+    background-color: #dc3545; /* Fond au clic */
+    border-color: #dc3545; /* Contour au clic */
+}
+
+.livre-resultat {
+    flex: 1 1 calc(25% - 20px); /* 4 éléments par ligne sur grands écrans */
+    box-sizing: border-box; /* Inclut le padding et le border dans la largeur totale */
+    background-color: #d8d7d7fd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    border: 2px solid #228064; /* Bordure ajoutée */
+    text-align: left;
+    margin-top: 20px;
+    position: relative;
+}
+
+.livre-resultat img {
+    max-width: 100%;
+    width: auto; /* Ajuste l'image pour qu'elle prenne toute la largeur de son conteneur */
+    height: auto; /* Maintient les proportions */
+    display: block;
+    margin-bottom: 10px;
+}
+
+.livre-resultat button {
+    background-color: floralwhite; /* Fond de l'icône */
+    border: 2px solid transparent; /* Contour initial transparent */
+    color: #228064; /* Couleur de l'icône */
+    font-size: 1.2em; /* Taille de l'icône */
+    padding: 8px; /* Espacement intérieur */
+    border-radius: 50%; /* Bordure arrondie */
+    display: inline-flex; /* Centrage de l'icône dans le bouton */
+    align-items: center; /* Centrage vertical */
+    justify-content: center; /* Centrage horizontal */
+    cursor: pointer;
+    width: 40px; /* Largeur fixée */
+    height: 40px; /* Hauteur fixée */
+    position: absolute;
+    top: 10px; /* Distance par rapport au haut */
+    right: 10px; /* Distance par rapport à la droite */
+  }
+
+.livre-resultat button:hover {
+    color: #228064; /* Couleur de l'icône au survol */
+    border-color: #228064; /* Couleur du contour au survol */
+    background-color: #f0f0f0; /* Couleur de fond au survol */
+}
+
+.livre-resultat button:active {
+    color: #fff; /* Couleur de l'icône au clic */
+    background-color: #228064; /* Couleur de fond au clic */
+    border-color: #228064; /* Couleur du contour au clic */
+}
+
+
+/* Styles pour les tablettes */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    #pochListeSection, #resultatRecherche {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 éléments par ligne */
+        gap: 20px; /* Espace entre les éléments */
+    }
+    #resultatRecherche h2 {
+        font-size: 2em; /* Taille de la police du titre */
+        width: 100%; /* Assure que le titre prend toute la largeur disponible */
+        grid-column: 1 / -1; /* Fait en sorte que le titre occupe toute la largeur du conteneur */
+        margin-top: 70px; /* Espace au-dessus du titre */
+        padding-bottom: 10px; /* Espace entre le titre et le trait horizontal */
+        padding-top: 10px; /* Espace entre le titre et le haut */
+        border: 2px solid #228064; /* Bordure ajoutée */
+        border-radius: 15px; /* Coins arrondis */
+        box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
+    }
+
+    .livre-poch-liste, .livre-resultat {
+        padding: 15px; /* Ajustez le padding si nécessaire */
+    }
+
+    .livre-poch-liste button, .livre-resultat .icon {
+        font-size: 1em; /* Ajustez la taille de la police pour les tablettes */
+        padding: 6px; /* Ajustez le padding si nécessaire */
+    }
+}
+/* Styles pour les mobiles */
+@media only screen and (max-width: 600px) {
+    #pochListeSection, #resultatRecherche {
+        display: grid;
+        grid-template-columns: 1fr; /* 1 élément par ligne */
+        gap: 20px; /* Espace entre les éléments */
+    }
+
+    .livre-poch-liste, .livre-resultat {
+        padding: 15px; /* Ajustez le padding si nécessaire */
+    }
+
+    .livre-poch-liste button, .livre-resultat .icon {
+        font-size: 0.9em; /* Ajustez la taille de la police pour les mobiles */
+        padding: 5px; /* Ajustez le padding si nécessaire */
+    }
+}

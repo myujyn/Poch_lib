@@ -47,16 +47,18 @@ body {
 }
 
 #resultatRecherche {
-    display: flex;
-    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Crée exactement 4 colonnes de taille égale */
+    grid-template-rows: auto 1fr; /* Deux lignes: une pour le titre, une pour les résultats */
     gap: 20px; /* Espace entre les éléments */
+    margin: 20px;
 }
 
 #resultatRecherche h2 {
+    grid-column: 1 / -1; /* Le titre s'étend sur toutes les colonnes */
     font-size: 2em; /* Taille de la police */
-    width: 100%; /* Utilise toute la largeur disponible */
     color: #228064; /* Couleur de la police */
-    margin-top: 70px; /* Espace au-dessus du titre */
+    margin-top: 0; /* Pas d'espace au-dessus du titre pour qu'il soit collé à la grille */
     padding-bottom: 10px; /* Espace entre le titre et le trait horizontal */
     padding-top: 10px; /* Espace entre le titre et le haut */
     border: 2px solid #228064;
@@ -205,7 +207,11 @@ hr {
     cursor: pointer;
     width: 40px; /* Largeur fixe pour le bouton */
     height: 40px; /* Hauteur fixe pour le bouton */
-}
+    position: absolute;
+    top: 10px; /* Distance par rapport au haut */
+    right: 10px; /* Distance par rapport à la droite */
+  }
+
 
 .livre-poch-liste button:hover {
     color: #c82333; /* Couleur de l'icône au survol */

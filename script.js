@@ -180,8 +180,6 @@ document.addEventListener("DOMContentLoaded", function() {
                         imageLivre.src = livre.image;
                         livreResultat.appendChild(imageLivre);
 
-                        
-
                         resultatRecherche.appendChild(livreResultat);
                     });
                 } else {
